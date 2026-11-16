@@ -53,6 +53,7 @@
 
 ```
 Child Development & Autism Therapy Center/
+├── index.html            # Primary entry/landing page for GitHub Pages & web servers
 ├── home1.html            # Primary clinical landing page (Early intervention, milestones, programs)
 ├── home2.html            # Secondary modern clinic page (OT, speech, behavioral therapy, sensory gym)
 ├── products.html         # Hand-crafted wooden carvings & sensory tools catalog
