@@ -1659,3 +1659,802 @@ input:focus, textarea:focus, select:focus {
     width: 100%;
   }
 }
+
+
+/* ========================================================
+   ENHANCEMENTS & EXPLICIT REFINEMENTS (ISSUES 1 - 29)
+   ======================================================== */
+
+/* 10. Tag Length: Never full width, always fit-content */
+.card-tag,
+.badge,
+.status-pill,
+.hero-tag,
+.tag,
+.eyebrow {
+  display: inline-block !important;
+  width: fit-content !important;
+  max-width: max-content !important;
+  box-sizing: border-box !important;
+}
+
+.card-tag {
+  padding: 4px 14px !important;
+  border-radius: 999px !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  background: var(--mint) !important;
+  color: var(--brand) !important;
+  border: 1px solid var(--line) !important;
+}
+
+/* 19. Brand Logo & Name Proper Alignment */
+.brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+}
+
+.brand-mark {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 12px !important;
+  background: var(--brand) !important;
+  color: #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.3rem !important;
+  box-shadow: 0 4px 12px rgba(36, 104, 100, 0.25) !important;
+  flex-shrink: 0 !important;
+}
+
+.brand-text {
+  display: flex !important;
+  flex-direction: column !important;
+  text-align: left !important;
+  line-height: 1.15 !important;
+}
+
+.brand-text b {
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  color: var(--ink) !important;
+}
+
+.brand-text small {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: var(--muted) !important;
+  margin-top: 2px !important;
+}
+
+/* In Auth Pages: Center brand logo & text */
+.auth-brand-center {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  margin-bottom: 24px !important;
+  gap: 8px !important;
+}
+
+.auth-brand-center .brand-mark {
+  margin: 0 auto 4px !important;
+}
+
+.auth-brand-center .brand-text {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* 2 & 29. Nav Actions Order & Mobile Stability */
+.nav-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+.btn-login {
+  order: 3 !important; /* Theme=1, RTL=2, Portal=3, Menu=4 */
+}
+
+.nav-actions [data-theme-toggle] {
+  order: 1 !important;
+}
+
+.nav-actions [data-rtl-toggle] {
+  order: 2 !important;
+}
+
+.nav-actions .menu-btn {
+  order: 4 !important;
+}
+
+/* 14. Social Media Buttons Visibility in Light Theme */
+.socials a,
+.social-links a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  color: #142233 !important;
+  background: #eaf1ef !important;
+  border: 1px solid #c2d6d1 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+  transition: all 0.2s ease !important;
+}
+
+.socials a svg,
+.social-links a svg {
+  width: 17px !important;
+  height: 17px !important;
+  fill: #142233 !important;
+}
+
+.socials a:hover,
+.social-links a:hover {
+  background: var(--brand) !important;
+  border-color: var(--brand) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+
+.socials a:hover svg,
+.social-links a:hover svg {
+  fill: #ffffff !important;
+}
+
+[data-theme="dark"] .socials a,
+[data-theme="dark"] .social-links a {
+  color: #f4f8f7 !important;
+  background: #1c3632 !important;
+  border-color: #2e534d !important;
+}
+
+[data-theme="dark"] .socials a svg,
+[data-theme="dark"] .social-links a svg {
+  fill: #f4f8f7 !important;
+}
+
+.footer .socials a {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.16) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+}
+
+.footer .socials a svg {
+  fill: #ffffff !important;
+}
+
+.footer .socials a:hover {
+  background: var(--brand) !important;
+  border-color: var(--brand) !important;
+}
+
+/* 5. Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--brand);
+  color: var(--btn-text);
+  border: 1px solid var(--brand);
+  box-shadow: 0 6px 20px rgba(36, 104, 100, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  cursor: pointer;
+  z-index: 990;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--brand-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 26px rgba(36, 104, 100, 0.45);
+}
+
+/* 4 & 7. Author Image in Testimonial Sections */
+.testimonial-author-wrap {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin-top: 14px !important;
+}
+
+.author-avatar {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2px solid var(--brand) !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+}
+
+.author-meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+}
+
+.author-meta b {
+  font-size: 0.96rem;
+  color: var(--ink);
+}
+
+.author-meta span {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* 6. Desktop Hero Background Images & Difference in Home 1 vs Home 2 */
+@media (min-width: 993px) {
+  /* Home 1 Hero: Centered Warm Organic Pediatric Atmosphere */
+  .hero-home1 {
+    background: linear-gradient(180deg, rgba(252, 251, 248, 0.90) 0%, rgba(234, 244, 241, 0.95) 100%),
+                url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat !important;
+    padding: 84px 0 96px !important;
+  }
+  
+  [data-theme="dark"] .hero-home1 {
+    background: linear-gradient(180deg, rgba(14, 26, 24, 0.90) 0%, rgba(22, 40, 37, 0.95) 100%),
+                url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat !important;
+  }
+
+  /* Home 2 Hero: Asymmetric Modern Multi-Column Clinical Focus */
+  .hero-home2 {
+    background: linear-gradient(135deg, rgba(234, 244, 241, 0.92) 0%, rgba(253, 242, 233, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat !important;
+    padding: 76px 0 88px !important;
+    text-align: left !important;
+  }
+
+  [data-theme="dark"] .hero-home2 {
+    background: linear-gradient(135deg, rgba(21, 45, 41, 0.92) 0%, rgba(54, 40, 30, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat !important;
+  }
+
+  .hero-home2 .home2-hero-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr !important;
+    gap: 48px !important;
+    align-items: center !important;
+  }
+
+  .hero-home2 .home2-hero-left {
+    text-align: left !important;
+  }
+
+  .hero-home2 .hero-buttons {
+    justify-content: flex-start !important;
+    margin: 22px 0 28px !important;
+  }
+
+  /* Subpages Heroes: Desktop Background Images */
+  .page-hero-therapies {
+    background: linear-gradient(135deg, rgba(252, 251, 248, 0.92) 0%, rgba(234, 244, 241, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat !important;
+  }
+
+  .page-hero-therapists {
+    background: linear-gradient(135deg, rgba(252, 251, 248, 0.92) 0%, rgba(234, 244, 241, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat !important;
+  }
+
+  .page-hero-services {
+    background: linear-gradient(135deg, rgba(252, 251, 248, 0.92) 0%, rgba(234, 244, 241, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat !important;
+  }
+
+  .page-hero-products {
+    background: linear-gradient(135deg, rgba(252, 251, 248, 0.92) 0%, rgba(253, 242, 233, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat !important;
+  }
+
+  .page-hero-contact {
+    background: linear-gradient(135deg, rgba(252, 251, 248, 0.92) 0%, rgba(234, 244, 241, 0.88) 100%),
+                url('https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat !important;
+  }
+
+  [data-theme="dark"] .page-hero-therapies,
+  [data-theme="dark"] .page-hero-therapists,
+  [data-theme="dark"] .page-hero-services,
+  [data-theme="dark"] .page-hero-products,
+  [data-theme="dark"] .page-hero-contact {
+    background-color: var(--surface) !important;
+  }
+}
+
+/* 11 & 12. Reduced Text Size in Pillars and Sensory Cards */
+.pillar-card,
+.ability-card,
+.feature-box,
+.sensory-feature-card {
+  padding: 22px 18px !important;
+  border-radius: 18px !important;
+  text-align: center !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.pillar-card:hover,
+.ability-card:hover,
+.feature-box:hover,
+.sensory-feature-card:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.pillar-card h3,
+.ability-card h3,
+.feature-box h3,
+.sensory-feature-card h3 {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  margin: 8px 0 6px !important;
+  color: var(--ink) !important;
+}
+
+.pillar-card p,
+.ability-card p,
+.feature-box p,
+.sensory-feature-card p {
+  font-size: 0.82rem !important;
+  line-height: 1.45 !important;
+  color: var(--muted) !important;
+  margin: 0 !important;
+}
+
+/* 21, 22, 25, 27. Centering the Last Card in 768px (Tablet View) */
+@media (min-width: 601px) and (max-width: 840px) {
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .grid3 > :last-child:nth-child(odd) {
+    grid-column: 1 / -1 !important;
+    width: 80% !important;
+    max-width: 440px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 23 & 24. 4-card grids in 768px */
+  .grid4,
+  .pillars-grid,
+  .sensory-features-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+/* Mobile Layout for 4-Card and 3-Card Grids (< 600px) */
+@media (max-width: 600px) {
+  .grid3,
+  .grid4,
+  .pillars-grid,
+  .sensory-features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .grid3 > :last-child:nth-child(odd) {
+    grid-column: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* 20. Navbar at 1024px & Mobile Breakpoints */
+@media (max-width: 1024px) {
+  .nav-links {
+    position: fixed !important;
+    top: 74px !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: var(--surface) !important;
+    flex-direction: column !important;
+    padding: 28px 24px !important;
+    gap: 14px !important;
+    align-items: flex-start !important;
+    border-top: 1px solid var(--line) !important;
+    transform: translateY(-120%) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: transform 0.28s ease, opacity 0.28s ease !important;
+    z-index: 999 !important;
+    box-shadow: 0 16px 36px rgba(0,0,0,0.15) !important;
+    overflow-y: auto !important;
+  }
+
+  .nav-links.open {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  .nav-links a {
+    font-size: 1.05rem !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+
+  .menu-btn {
+    display: inline-flex !important;
+  }
+
+  .nav-wrap {
+    height: 74px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    font-size: 0.76rem !important;
+    padding: 6px 0 !important;
+  }
+
+  .btn-login {
+    padding: 7px 12px !important;
+    font-size: 0.78rem !important;
+  }
+
+  .icon-btn, .menu-btn {
+    padding: 7px 10px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .brand-mark {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.15rem !important;
+  }
+
+  .brand-text b {
+    font-size: 1rem !important;
+  }
+}
+
+/* 8. Therapies Care Pathway Section Alignment */
+.care-pathway-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pathway-step-card {
+  display: flex !important;
+  gap: 16px !important;
+  align-items: flex-start !important;
+  padding: 18px 20px !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+.pathway-step-card:hover {
+  transform: translateY(-2px) !important;
+  border-color: var(--brand) !important;
+}
+
+.pathway-num {
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  background: var(--brand) !important;
+  color: var(--btn-text) !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.pathway-step-body h4 {
+  margin: 0 0 4px !important;
+  font-size: 1rem !important;
+  color: var(--ink) !important;
+}
+
+.pathway-step-body p {
+  margin: 0 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.55 !important;
+  color: var(--muted) !important;
+}
+
+/* 26. Contact Page Mobile Accessibility Box Alignment */
+.access-box {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 14px !important;
+  padding: 18px !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  text-align: left !important;
+}
+
+.access-icon {
+  font-size: 1.4rem !important;
+  line-height: 1 !important;
+  flex-shrink: 0 !important;
+  color: var(--brand) !important;
+}
+
+.access-box-content b {
+  display: block !important;
+  margin-bottom: 4px !important;
+  color: var(--ink) !important;
+  font-size: 0.92rem !important;
+}
+
+.access-box-content p {
+  margin: 0 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.5 !important;
+  color: var(--muted) !important;
+}
+
+/* 15. FAQ Accordion Section */
+.faq-section {
+  padding: 72px 0 !important;
+  background: var(--mint) !important;
+}
+
+.faq-grid {
+  max-width: 820px !important;
+  margin: 32px auto 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.faq-item {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.faq-item[open] {
+  border-color: var(--brand) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.faq-question {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 18px 22px !important;
+  font-size: 1.02rem !important;
+  font-weight: 700 !important;
+  color: var(--ink) !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  user-select: none !important;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none !important;
+}
+
+.faq-question::after {
+  content: '+' !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  color: var(--brand) !important;
+  transition: transform 0.2s ease !important;
+}
+
+.faq-item[open] .faq-question::after {
+  content: '−' !important;
+}
+
+.faq-answer {
+  padding: 0 22px 18px !important;
+  color: var(--muted) !important;
+  line-height: 1.65 !important;
+  font-size: 0.92rem !important;
+}
+
+/* 16, 18. Password Field with Eye Icon & Forgot Link */
+.password-field-wrap {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.password-field-wrap input {
+  width: 100% !important;
+  padding-right: 44px !important;
+}
+
+.password-toggle-btn {
+  position: absolute !important;
+  right: 12px !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  color: var(--muted) !important;
+  padding: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: color 0.2s ease !important;
+}
+
+.password-toggle-btn:hover {
+  color: var(--brand) !important;
+}
+
+.form-row-between {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  margin: 12px 0 16px !important;
+  font-size: 0.88rem !important;
+}
+
+.forgot-link {
+  color: var(--brand) !important;
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+}
+
+.forgot-link:hover {
+  color: var(--brand-hover) !important;
+}
+
+/* 1. Professional Dashboard Page Layout with Sidebar */
+.dash-wrapper {
+  display: flex !important;
+  min-height: calc(100vh - 84px) !important;
+  background: var(--bg) !important;
+}
+
+.dash-sidebar {
+  width: 270px !important;
+  background: var(--surface) !important;
+  border-right: 1px solid var(--line) !important;
+  padding: 24px 18px !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  position: sticky !important;
+  top: 84px !important;
+  height: calc(100vh - 84px) !important;
+  overflow-y: auto !important;
+}
+
+.dash-child-card {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px !important;
+  background: var(--mint) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 14px !important;
+}
+
+.dash-child-avatar {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 2px solid var(--brand) !important;
+}
+
+.dash-child-meta b {
+  display: block !important;
+  font-size: 0.92rem !important;
+  color: var(--ink) !important;
+}
+
+.dash-child-meta span {
+  font-size: 0.76rem !important;
+  color: var(--muted) !important;
+}
+
+.dash-nav {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.dash-nav-item a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 10px 14px !important;
+  border-radius: 10px !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  color: var(--muted) !important;
+  transition: all 0.2s ease !important;
+}
+
+.dash-nav-item a:hover,
+.dash-nav-item a.active {
+  background: var(--mint) !important;
+  color: var(--brand) !important;
+  font-weight: 700 !important;
+}
+
+.dash-content {
+  flex: 1 !important;
+  padding: 32px 36px !important;
+  overflow-y: auto !important;
+}
+
+@media (max-width: 900px) {
+  .dash-wrapper {
+    flex-direction: column !important;
+  }
+
+  .dash-sidebar {
+    width: 100% !important;
+    height: auto !important;
+    position: static !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--line) !important;
+    padding: 16px 20px !important;
+    gap: 12px !important;
+  }
+
+  .dash-nav {
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    padding-bottom: 4px !important;
+  }
+
+  .dash-nav-item a {
+    white-space: nowrap !important;
+    padding: 8px 12px !important;
+    font-size: 0.84rem !important;
+  }
+
+  .dash-content {
+    padding: 24px 18px !important;
+  }
+}

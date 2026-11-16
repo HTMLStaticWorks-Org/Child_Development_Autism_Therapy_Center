@@ -18,47 +18,50 @@
     </div>
   </div>
 
-  <!-- Header with Centered Nav Menu & Parent Login Button at Last -->
+  <!-- Header with Centered Nav Menu & Fixed Theme/RTL/Portal Order -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html">
         <span class="brand-mark">✿</span>
-        <span>Bright Path<small>Child Development Center</small></span>
+        <span class="brand-text">
+          <b>Bright Path</b>
+          <small>Child Development Center</small>
+        </span>
       </a>
 
-      <!-- 1. Navbar menu options aligned to center -->
+      <!-- 1. Navbar menu options aligned to center (Services replaces Gallery) -->
       <nav class="nav-links">
         <a href="index.html" class="active">Home1</a>
         <a href="home2.html">Home2</a>
         <a href="therapies.html">Therapies</a>
         <a href="therapists.html">Therapists</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="services.html">Services</a>
         <a href="products.html">Products</a>
         <a href="contact.html">Contact</a>
       </nav>
 
-      <!-- 3. Parent Login as button at last + Actions -->
+      <!-- 2. Keep Theme, RTL, then Portal button -->
       <div class="nav-actions">
-        <a href="login.html" class="btn-login">Parent Portal ↗</a>
-        <button class="icon-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
         <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">◐</button>
+        <button class="icon-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
+        <a href="login.html" class="btn-login">Parent Portal ↗</a>
         <button class="menu-btn" aria-label="Toggle menu">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- 10. Hero Section Contents Aligned to Center with Unique Child Development & Autism Photo -->
-  <section class="hero">
+  <!-- 6. Hero Section: Desktop Background Image with Centered Organic Atmosphere -->
+  <section class="hero hero-home1">
     <div class="container">
       <div class="hero-center-wrap">
         <span class="eyebrow">A place to grow, together</span>
         <h1>A brighter beginning starts with <span style="color:var(--brand)">being understood.</span></h1>
         <p class="hero-copy">Compassionate developmental and autism therapy support for children and the families who love them. Together, we nurture communication, sensory regulation, and confidence—one meaningful step at a time.</p>
         
-        <!-- 5. CTA buttons aligned properly to center -->
+        <!-- Centered CTA Buttons -->
         <div class="hero-buttons">
           <a class="btn" href="contact.html">Book a discovery call ↗</a>
-          <a class="btn secondary" href="therapies.html">Explore therapies</a>
+          <a class="btn secondary" href="services.html">Explore clinical services</a>
         </div>
 
         <div class="trust">
@@ -69,7 +72,7 @@
         </div>
       </div>
 
-      <!-- Centered Hero Visual (Child Development & Autism Photo) -->
+      <!-- Centered Hero Visual -->
       <div class="hero-visual-center">
         <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1200&q=85" alt="Child happily engaged in developmental and sensory therapy activity" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80';">
         <div class="hero-float-badge">
@@ -80,7 +83,7 @@
     </div>
   </section>
 
-  <!-- 11. Avoid empty spaces: Section 2 - Core Child Development & Autism Therapies -->
+  <!-- Section 2: Core Child Development & Autism Therapies -->
   <section class="section soft">
     <div class="container">
       <div class="head">
@@ -139,7 +142,7 @@
     </div>
   </section>
 
-  <!-- 11. Section 4: Specialized Autism Care Programs (No empty space) -->
+  <!-- Section 4: Specialized Autism Care Programs -->
   <section class="section soft">
     <div class="container">
       <div class="head">
@@ -208,7 +211,7 @@
     </div>
   </section>
 
-  <!-- Section 6: Testimonials and Notes -->
+  <!-- 4. Section 6: Testimonial with Author Image -->
   <section class="section soft">
     <div class="container grid2">
       <div>
@@ -219,12 +222,61 @@
       </div>
       <div class="quote">
         “The therapists at Bright Path gave us the understanding and tools we desperately needed. For the first time, our son is excited about his sessions, and we feel confident supporting his sensory needs at home.”
-        <p style="margin-top:14px;font-weight:700;color:var(--ink)">— Priya & Rajesh S., Parents of 5-year-old Aarav</p>
+        
+        <!-- 4. Author Image Added in Home 1 -->
+        <div class="testimonial-author-wrap">
+          <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=160&q=80" alt="Priya & Rajesh S." class="author-avatar" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=160&q=80';">
+          <div class="author-meta">
+            <b>Priya & Rajesh S.</b>
+            <span>Parents of 5-year-old Aarav · Chennai</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. CTA Section: Centered & Properly Aligned -->
+  <!-- 15. FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="head">
+        <span class="eyebrow">Frequently Asked Questions</span>
+        <h2>Answers to common parent questions</h2>
+        <p>Learn more about how our clinical team supports your child's developmental path.</p>
+      </div>
+
+      <div class="faq-grid">
+        <details class="faq-item" open>
+          <summary class="faq-question">What age groups does Bright Path support?</summary>
+          <div class="faq-answer">
+            We provide specialized developmental care for infants, toddlers, and children from 12 months through 16 years of age, emphasizing early intervention and school transition.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Do we need a formal medical referral before booking?</summary>
+          <div class="faq-answer">
+            No doctor referral is required to schedule an initial consultation or developmental screening. We welcome all families seeking guidance.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">Can parents observe or join therapy sessions?</summary>
+          <div class="faq-answer">
+            Yes, caregiver participation is at the core of our philosophy. We actively coach parents so skills learned in the clinic flourish naturally at home.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">What makes neurodiversity-affirming care unique?</summary>
+          <div class="faq-answer">
+            We honor your child's authentic identity, focusing on sensory comfort, emotional co-regulation, and functional communication without forcing masking or compliance.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Centered CTA Section -->
   <section class="section">
     <div class="container">
       <div class="cta">
@@ -267,7 +319,7 @@
           <p><a href="home2.html">Home2</a></p>
           <p><a href="therapies.html">Our therapies</a></p>
           <p><a href="therapists.html">Meet the team</a></p>
-          <p><a href="gallery.html">Therapy gallery</a></p>
+          <p><a href="services.html">Clinical services</a></p>
           <p><a href="products.html">Sensory products</a></p>
           <p><a href="contact.html">Contact us</a></p>
         </div>

@@ -21,12 +21,12 @@
     </div>
   </div>
 
-  <!-- Header with Centered Nav Menu & Parent Login Button at Last -->
+  <!-- Header with Centered Nav Menu & Action Order: Theme, RTL, Parent Portal -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html">
         <span class="brand-mark">✿</span>
-        <span>Bright Path<small>Child Development Center</small></span>
+        <span class="brand-text">Bright Path<small>Child Development Center</small></span>
       </a>
 
       <!-- 1. Navbar menu options aligned to center -->
@@ -35,23 +35,23 @@
         <a href="home2.html">Home2</a>
         <a href="therapies.html">Therapies</a>
         <a href="therapists.html">Therapists</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="services.html">Services</a>
         <a href="products.html" class="active">Products</a>
         <a href="contact.html">Contact</a>
       </nav>
 
-      <!-- 3. Parent Login as button at last + Actions -->
+      <!-- 2. Nav Actions Order: Theme, RTL, Portal Button, Menu -->
       <div class="nav-actions">
-        <a href="login.html" class="btn-login">Parent Portal ↗</a>
-        <button class="icon-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
-        <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">◐</button>
-        <button class="menu-btn" aria-label="Toggle menu">☰</button>
+        <button class="theme-btn" data-theme-toggle aria-label="Toggle color theme">◐</button>
+        <button class="theme-btn" data-rtl-toggle aria-label="Toggle text direction">RTL</button>
+        <a href="login.html" class="btn btn-login">Parent Portal ↗</a>
+        <button class="menu-btn" aria-label="Toggle navigation drawer">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- 10. Hero Section Contents Aligned to Center with Unique Child Development & Autism Photo -->
-  <section class="hero">
+  <!-- 6. Hero Section with Desktop Background Image -->
+  <section class="hero page-hero-products">
     <div class="container">
       <div class="hero-center-wrap">
         <span class="eyebrow">Tactile Therapy · Montessori & Autism Support</span>
@@ -88,7 +88,7 @@
     </div>
   </section>
 
-  <!-- 11. Section 2: Why Natural Wood Carvings for Autism (No empty space) -->
+  <!-- 11 & 25. Section 2: Why Natural Wood Carvings for Autism (Last card centered in 768px) -->
   <section class="section soft">
     <div class="container">
       <div class="head">
@@ -303,6 +303,40 @@
     </div>
   </section>
 
+  <!-- 15. FAQ Accordion Section -->
+  <section class="section faq-section">
+    <div class="container">
+      <div class="head">
+        <span class="eyebrow">Product Care & Safety FAQ</span>
+        <h2>Frequently asked questions about our sensory carvings</h2>
+        <p>Helpful advice on sanitizing, wood longevity, and therapy recommendations for your home or school.</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question">Are the wooden carvings safe if a child mouths them? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">
+            <p>Yes. All our products are sealed with certified organic, food-grade beeswax and cold-pressed linseed oil without dyes, paints, or heavy metals.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How should we clean and sanitize sensory wooden tools? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">
+            <p>Wipe with a damp microfiber cloth and mild plant-based soap. Never submerge in water. Reapply a light drop of natural coconut or beeswax oil every 3 months to preserve the velvety grain.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can therapists order tailored items for clinic rooms? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">
+            <p>Yes. We craft custom dimensions, personalized weight distributions, and adapted handles for pediatric therapy centers, special education centers, and hospitals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 5. CTA Section: Centered & Properly Aligned -->
   <section class="section">
     <div class="container">
@@ -322,7 +356,7 @@
         <div>
           <a class="brand" href="index.html">
             <span class="brand-mark">✿</span>
-            <span style="color:#ffffff">Bright Path<small style="color:#bfd2cc">Child Development Center</small></span>
+            <span class="brand-text" style="color:#ffffff">Bright Path<small style="color:#bfd2cc">Child Development Center</small></span>
           </a>
           <p style="margin-top:16px">Small steps, meaningful progress. A welcoming center for children on the autism
             spectrum and families to learn, grow, and thrive.</p>
@@ -360,7 +394,7 @@
           <p><a href="home2.html">Home2</a></p>
           <p><a href="therapies.html">Our therapies</a></p>
           <p><a href="therapists.html">Meet the team</a></p>
-          <p><a href="gallery.html">Therapy gallery</a></p>
+          <p><a href="services.html">Clinical services</a></p>
           <p><a href="products.html">Sensory products</a></p>
           <p><a href="contact.html">Contact us</a></p>
         </div>
@@ -369,7 +403,7 @@
           <h3>For Families</h3>
           <p><a href="login.html">Parent portal login</a></p>
           <p><a href="register.html">Create parent account</a></p>
-          <p><a href="dashboard.html">Family dashboard demo</a></p>
+          <p><a href="dashboard.html">Family dashboard</a></p>
           <p><a href="contact.html">Book consultation</a></p>
         </div>
 
@@ -387,6 +421,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- 5. Floating Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 
   <script src="assets/app.js"></script>
 </body>

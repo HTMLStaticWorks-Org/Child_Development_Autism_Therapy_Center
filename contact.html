@@ -18,37 +18,37 @@
     </div>
   </div>
 
-  <!-- Header with Centered Nav Menu & Parent Login Button at Last -->
+  <!-- Header with Centered Nav Menu & Action Order: Theme, RTL, Parent Portal -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html">
         <span class="brand-mark">✿</span>
-        <span>Bright Path<small>Child Development Center</small></span>
+        <span class="brand-text">Bright Path<small>Child Development Center</small></span>
       </a>
 
-      <!-- 1. Navbar menu options aligned to center (Contact page is at last of the links) -->
+      <!-- 1. Navbar menu options aligned to center -->
       <nav class="nav-links">
         <a href="index.html">Home1</a>
         <a href="home2.html">Home2</a>
         <a href="therapies.html">Therapies</a>
         <a href="therapists.html">Therapists</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="services.html">Services</a>
         <a href="products.html">Products</a>
         <a href="contact.html" class="active">Contact</a>
       </nav>
 
-      <!-- 3. Parent Login as button at last + Actions -->
+      <!-- 2. Nav Actions Order: Theme, RTL, Portal Button, Menu -->
       <div class="nav-actions">
-        <a href="login.html" class="btn-login">Parent Portal ↗</a>
-        <button class="icon-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
-        <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">◐</button>
-        <button class="menu-btn" aria-label="Toggle menu">☰</button>
+        <button class="theme-btn" data-theme-toggle aria-label="Toggle color theme">◐</button>
+        <button class="theme-btn" data-rtl-toggle aria-label="Toggle text direction">RTL</button>
+        <a href="login.html" class="btn btn-login">Parent Portal ↗</a>
+        <button class="menu-btn" aria-label="Toggle navigation drawer">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- 10. Hero Section Contents Aligned to Center with Unique Child Development & Autism Photo -->
-  <section class="page-hero">
+  <!-- 6. Hero Section with Desktop Background Image -->
+  <section class="page-hero page-hero-contact">
     <div class="container">
       <span class="eyebrow">We're Here to Listen</span>
       <h1>Let's Take the First Step Together</h1>
@@ -110,7 +110,12 @@
           <p class="info">☎ <strong>Phone:</strong> +91 98765 43210 / +91 44 2345 6789</p>
           <p class="info">✉ <strong>Email:</strong> hello@brightpath.example</p>
           <p class="info">◷ <strong>Hours:</strong> Monday–Saturday: 9:00 AM – 6:00 PM (Closed Sundays)</p>
-          <p class="info">♿ <strong>Accessibility:</strong> Full wheelchair and sensory-stroller access, low-glare lighting, noise-buffered reception</p>
+          
+          <!-- 26. Accessibility box properly aligned for mobile & desktop -->
+          <div class="access-box">
+            <span class="access-icon">♿</span>
+            <div><strong>Accessibility:</strong> Full wheelchair and sensory-stroller access, low-glare lighting, noise-buffered reception</div>
+          </div>
           
           <div class="socials" style="margin-top:20px">
             <a href="#" aria-label="Instagram">
@@ -133,7 +138,7 @@
     </div>
   </section>
 
-  <!-- 11. Section 3: What Happens Next? (Avoid empty spaces) -->
+  <!-- 11 & 27. Section 3: What Happens Next? (Last card centered at 768px) -->
   <section class="section soft">
     <div class="container">
       <div class="head">
@@ -170,6 +175,40 @@
     </div>
   </section>
 
+  <!-- 15. FAQ Accordion Section -->
+  <section class="section faq-section">
+    <div class="container">
+      <div class="head">
+        <span class="eyebrow">Contact & Visit FAQ</span>
+        <h2>Frequently asked questions about visiting us</h2>
+        <p>Practical info on appointments, parking, sensory accommodations, and insurance coverage.</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question">Do we need a formal medical referral to book an intake? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">
+            <p>No referral is required. Parents can reach out directly whenever they have questions or developmental concerns regarding their child.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">What if my child feels anxious or has a sensory meltdown during the visit? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">
+            <p>Our entire facility is designed for neurodivergent children. We have dedicated sensory decompression rooms, soft dimmable lighting, and experienced therapists skilled in gentle co-regulation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Is on-site parking available? <span class="faq-arrow">▼</span></button>
+          <div class="faq-answer">
+            <p>Yes, we have reserved parent parking directly in front of our facility with level ramp access for strollers and wheelchairs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 5. CTA Section: Centered & Properly Aligned -->
   <section class="section">
     <div class="container">
@@ -188,7 +227,7 @@
         <div>
           <a class="brand" href="index.html">
             <span class="brand-mark">✿</span>
-            <span style="color:#ffffff">Bright Path<small style="color:#bfd2cc">Child Development Center</small></span>
+            <span class="brand-text" style="color:#ffffff">Bright Path<small style="color:#bfd2cc">Child Development Center</small></span>
           </a>
           <p style="margin-top:16px">Small steps, meaningful progress. A welcoming center for children on the autism spectrum and families to learn, grow, and thrive.</p>
           <div class="socials">
@@ -213,7 +252,7 @@
           <p><a href="home2.html">Home2</a></p>
           <p><a href="therapies.html">Our therapies</a></p>
           <p><a href="therapists.html">Meet the team</a></p>
-          <p><a href="gallery.html">Therapy gallery</a></p>
+          <p><a href="services.html">Clinical services</a></p>
           <p><a href="products.html">Sensory products</a></p>
           <p><a href="contact.html">Contact us</a></p>
         </div>
@@ -222,7 +261,7 @@
           <h3>For Families</h3>
           <p><a href="login.html">Parent portal login</a></p>
           <p><a href="register.html">Create parent account</a></p>
-          <p><a href="dashboard.html">Family dashboard demo</a></p>
+          <p><a href="dashboard.html">Family dashboard</a></p>
           <p><a href="contact.html">Book consultation</a></p>
         </div>
 
@@ -240,6 +279,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- 5. Floating Back to Top Button -->
+  <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 
   <script src="assets/app.js"></script>
 </body>

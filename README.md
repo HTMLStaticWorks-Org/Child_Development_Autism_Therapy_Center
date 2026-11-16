@@ -6,46 +6,46 @@
 
 ## 🌟 Key Features & Requirements Met
 
-1. **Centered Navigation Bar**:
+1. **Centered Navigation Bar & Action Order**:
    - Navigation links centered cleanly across desktop and tablet views.
-   - Distinct, prominent **Parent Portal / Parent Login** CTA button positioned at the end of the header navigation.
-   - Accessible mobile drawer menu with touch-friendly layout.
+   - Header actions arranged in exact required order: **Theme Toggle (`◐`)**, **RTL Toggle (`RTL`)**, and **Parent Portal (`Parent Portal ↗`)**.
+   - Accessible mobile drawer menu with touch-friendly layout and no broken links.
 
-2. **Sensory Wooden Products & Carvings Catalog (`products.html`)**:
+2. **Dedicated Services Page (`services.html`)**:
+   - Fully replaces the former gallery page across navigation and routing.
+   - Highlights 6 core clinical pediatric therapies and 4 sensory-friendly clinical architecture cards.
+   - Features reduced, balanced typography and responsive 2x2 grid on 768px view.
+   - Includes interactive FAQ accordion and centered intake process.
+
+3. **Parent Portal Dashboard with Left Sidebar (`dashboard.html`)**:
+   - Complete clinical family dashboard featuring a sticky left sidebar menu.
+   - Navigation tabs: Overview, Daily Log, Therapy Schedule, Milestone Progress, Assigned Tools, Clinical Notes, and Statements.
+   - Displays real-time child profile (Aarav Sharma, age 5), key progress metrics, interactive appointment booking, and therapist clinical notes.
+
+4. **Sensory Wooden Products & Carvings Catalog (`products.html`)**:
    - Dedicated catalog displaying realistic artisan wood carvings and tactile Montessori sensory tools.
-   - Products include:
-     - Hand-Carved Tactile Sensory Maze
-     - Artisan Wooden Calming Animals
-     - Geometric Balance & Stacking Set
-     - Tactile Inset Wooden Puzzle
-     - Polished Hardwood Worry Palm Stones
-     - Acoustic Resonating Sound Cylinders
-     - Ergonomic Artisan Therapy Bench
+   - Features 3rd-card middle centering on 768px viewport for "Why natural wood supports neurodivergent children".
    - Non-toxic finishes, organic beeswax sealing, splinter-free safety certifications.
 
-3. **Curated Domain Imagery**:
-   - High-contrast, authentic photography strictly dedicated to child development, developmental pediatrics, sensory rooms, and autism therapy.
-   - Unique hero section imagery on every page.
-   - Automated fallbacks (`onerror`) to guaranteed clinical CDN backups to prevent broken image placeholders.
+5. **Curated Autism & Pediatric Therapy Imagery**:
+   - Authentic, high-contrast photography strictly dedicated to child development, developmental pediatrics, sensory rooms, and autism therapy.
+   - Distinct hero section designs: centered milestone layout for Home 1 and asymmetric 2-column spotlight layout for Home 2.
+   - Verified parent testimonial author photos for Priya & Rajesh S. (Home 1) and Sneha & Karthik N. (Home 2).
+   - Desktop hero background images with automated fallback handlers (`onerror`) across all pages.
 
-4. **Streamlined Authentication Experience (`login.html` & `register.html`)**:
-   - Image-free, centered authentication card layout.
-   - RTL and Dark/Light Mode toggles positioned outside the card at the top-right corner.
-   - Centered clinic brand header inside the card.
-   - Cross-platform inline vector SVGs for Google, Apple, and Facebook single-sign-on (no font glyph dependencies).
-   - Clean community social icons (Instagram, Facebook, YouTube, LinkedIn) with zero duplication.
-   - Required Terms and Conditions / Clinical Consent checkbox with direct modal preview.
-   - Removed back-to-website button for a focused authentication workflow.
+6. **Authentication Experience (`login.html` & `register.html`)**:
+   - Clean, centered card layout without distracting imagery or external community social links.
+   - Brand logo and name aligned vertically with icon on top inside the auth card.
+   - Password fields equipped with interactive show/hide eye toggle button (`👁`).
+   - Registration page includes Confirm Password field and clinical consent checkbox.
+   - Login page streamlined with "Remember this device" and "Forgot password?" link (removed terms checkbox and support box).
 
-5. **Responsive Layouts**:
-   - Pixel-perfect alignment across **768px**, **1024px**, tablet, and mobile breakpoints.
-   - 2-column to 1-column responsive grid transformations for therapy and gallery cards.
-   - Centered CTA banners and hero sections.
-
-6. **Accessibility & Contrast**:
-   - Full dark mode and light mode support with high-contrast color tokens.
-   - Complete Right-to-Left (RTL) layout switching support.
-   - Accessible ARIA labels and semantic HTML5 landmarks throughout.
+7. **Responsive & Accessible Design**:
+   - Strict alignment at **768px**, **1024px**, tablet, and mobile breakpoints.
+   - 3-card grids automatically center the 3rd odd card in 768px view.
+   - 4-card developmental pillars and sensory architecture adapt to 2x2 on 768px and 1-column on mobile.
+   - High-contrast social media icon buttons in both dark and light modes.
+   - Floating Back to Top button (`↑`) on all pages.
 
 ---
 
@@ -53,20 +53,22 @@
 
 ```
 Child Development & Autism Therapy Center/
-├── index.html            # Primary entry/landing page for GitHub Pages & web servers
+├── index.html            # Primary entry/landing page (Home 1)
 ├── home1.html            # Primary clinical landing page (Early intervention, milestones, programs)
 ├── home2.html            # Secondary modern clinic page (OT, speech, behavioral therapy, sensory gym)
-├── products.html         # Hand-crafted wooden carvings & sensory tools catalog
+├── services.html         # Clinical therapy programs & sensory-friendly clinic architecture
 ├── therapies.html        # Comprehensive clinical therapy programs & care pathways
 ├── therapists.html       # Multidisciplinary clinical team & pediatric specialists
-├── gallery.html          # Sensory architecture, therapy spaces & pediatric activity rooms
+├── products.html         # Hand-crafted wooden carvings & sensory tools catalog
 ├── contact.html          # Clinic inquiries, intake assessment booking & Chennai location map
-├── dashboard.html        # Parent portal dashboard: progress trackers, appointments & statement
+├── dashboard.html        # Parent portal dashboard with left sidebar navigation
 ├── login.html            # Parent portal secure login
 ├── register.html         # Parent portal account registration
+├── gallery.html          # Redirect helper to services.html
+├── .nojekyll             # Bypasses Jekyll on GitHub Pages for clean root serving
 ├── assets/
-│   ├── style.css         # Responsive CSS with CSS custom properties, RTL, & dark theme
-│   └── script.js         # Navigation, theme switcher, RTL toggle, & interactive widgets
+│   ├── style.css         # Complete CSS styles, theme tokens, RTL rules, and responsive breakpoints
+│   └── app.js            # Theme switcher, RTL toggle, drawer menu, eye password toggle, back-to-top
 └── README.md             # Project documentation
 ```
 
@@ -78,7 +80,7 @@ Child Development & Autism Therapy Center/
    ```bash
    git clone https://github.com/HTMLStaticWorks-Org/Child_Development_Autism_Therapy_Center.git
    ```
-2. Open `home1.html` or any page in any modern web browser.
+2. Open `index.html` or any page directly in any modern web browser.
 3. No build step or package dependencies required — runs completely client-side with native HTML5, CSS3, and modern ES6 JavaScript.
 
 ---

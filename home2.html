@@ -4,7 +4,7 @@
   <title>Home2 | Bright Path - Child Development & Autism Therapy Center</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Compassionate child development and autism therapy support. Neurodiversity-affirming care for children and families.">
+  <meta name="description" content="Compassionate child development and autism therapy support. Multidisciplinary clinical practice.">
   <link rel="icon" href="favicon.svg">
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -13,74 +13,87 @@
   <!-- Top bar -->
   <div class="topbar">
     <div class="container">
-      <span>♡ Every child has a bright path · Multidisciplinary Autism Care</span>
+      <span>♡ Every child has a bright path · Multidisciplinary Clinical Practice</span>
       <span>Mon–Sat · 9 AM–6 PM | +91 98765 43210</span>
     </div>
   </div>
 
-  <!-- Header with Centered Nav Menu & Parent Login Button at Last -->
+  <!-- Header with Centered Nav Menu & Fixed Theme/RTL/Portal Order -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html">
         <span class="brand-mark">✿</span>
-        <span>Bright Path<small>Child Development Center</small></span>
+        <span class="brand-text">
+          <b>Bright Path</b>
+          <small>Child Development Center</small>
+        </span>
       </a>
 
-      <!-- 1. Navbar menu options aligned to center -->
+      <!-- 1. Navbar menu options aligned to center (Services replaces Gallery) -->
       <nav class="nav-links">
         <a href="index.html">Home1</a>
         <a href="home2.html" class="active">Home2</a>
         <a href="therapies.html">Therapies</a>
         <a href="therapists.html">Therapists</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="services.html">Services</a>
         <a href="products.html">Products</a>
         <a href="contact.html">Contact</a>
       </nav>
 
-      <!-- 3. Parent Login as button at last + Actions -->
+      <!-- 2. Keep Theme, RTL, then Portal button -->
       <div class="nav-actions">
-        <a href="login.html" class="btn-login">Parent Portal ↗</a>
-        <button class="icon-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
         <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">◐</button>
+        <button class="icon-btn" data-rtl-toggle aria-label="Toggle RTL">RTL</button>
+        <a href="login.html" class="btn-login">Parent Portal ↗</a>
         <button class="menu-btn" aria-label="Toggle menu">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- 10. Hero Section Contents Aligned to Center with Unique Child Development & Autism Photo -->
-  <section class="hero">
+  <!-- 6. Hero Section: Distinct Asymmetric 2-Column Desktop Layout with Background Image -->
+  <section class="hero hero-home2">
     <div class="container">
-      <div class="hero-center-wrap">
-        <span class="eyebrow">Gentle Guidance · Lasting Confidence</span>
-        <h1>Big possibilities begin with <span style="color:var(--brand)">small, steady steps.</span></h1>
-        <p class="hero-copy">A warm, play-rich autism therapy community where children are supported to communicate freely, navigate sensory environments, and flourish on their own unique timeline.</p>
-        
-        <!-- 5. CTA buttons aligned properly to center -->
-        <div class="hero-buttons">
-          <a class="btn" href="contact.html">Schedule an initial assessment ↗</a>
-          <a class="btn secondary" href="products.html">View sensory tools</a>
+      <div class="home2-hero-grid">
+        <!-- Left Column: Bold Clinical Heading, Trust Points & CTAs -->
+        <div class="home2-hero-left">
+          <span class="eyebrow">Multidisciplinary Pediatric Practice</span>
+          <h1>Personalized Pediatric <span style="color:var(--brand)">Autism & Sensory</span> Care</h1>
+          <p class="hero-copy" style="text-align:left;max-width:540px;margin-bottom:20px">A warm, play-rich autism therapy community where children are supported to communicate freely, navigate sensory environments, and flourish on their own unique timeline.</p>
+          
+          <div class="trust" style="justify-content:flex-start;margin-bottom:24px;gap:14px">
+            <span>✦ Sensory-First Architecture</span>
+            <span>✦ 1:1 Clinical Ratios</span>
+            <span>✦ Neurodiversity-Affirming</span>
+          </div>
+
+          <div class="hero-buttons">
+            <a class="btn" href="contact.html">Schedule an initial assessment ↗</a>
+            <a class="btn secondary" href="services.html">Explore our services</a>
+          </div>
         </div>
 
-        <div class="trust">
-          <span>✦ Sensory-First Architecture</span>
-          <span>✦ Multidisciplinary Experts</span>
-          <span>✦ Personalized Progress Paths</span>
-          <span>✦ Compassionate Parent Support</span>
-        </div>
-      </div>
-
-      <!-- Centered Hero Visual (Unique Child Development & Autism Photo) -->
-      <div class="hero-visual-center">
-        <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1200&q=85" alt="Child exploring tactile sensory tools in an autism therapy clinic" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80';">
-        <div class="hero-float-badge">
-          <b>Sensory Regulation First</b>
-          <p>When a child feels calm, safe, and regulated, joyful communication and learning naturally unfold.</p>
+        <!-- Right Column: Interactive Clinical Spotlight Card with Visual Reassurance -->
+        <div class="home2-hero-right">
+          <div class="card" style="padding:22px;border-radius:24px;box-shadow:var(--shadow);background:var(--surface)">
+            <div style="position:relative;overflow:hidden;border-radius:18px;margin-bottom:18px">
+              <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=85" alt="Child exploring tactile sensory tools in an autism therapy clinic" style="width:100%;height:280px;object-fit:cover;border-radius:18px" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80';">
+              <span class="card-tag" style="position:absolute;top:14px;left:14px;background:rgba(255,255,255,0.95);color:var(--brand);box-shadow:0 4px 12px rgba(0,0,0,0.15)">Sensory Processing Gym</span>
+            </div>
+            
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:0 6px">
+              <div>
+                <b style="display:block;font-size:1.05rem;color:var(--ink)">Regulation Before Learning</b>
+                <span style="font-size:0.82rem;color:var(--muted)">Individualized nervous system pacing</span>
+              </div>
+              <span style="font-weight:800;color:var(--accent);font-size:1.1rem">★★★★★ 5.0</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 11. Avoid empty spaces: Section 2 - Specialized Autism Clinical Disciplines -->
+  <!-- 21 & 22. Section 2: Clinical Programs (Centered Last Card in 768px) -->
   <section class="section soft">
     <div class="container">
       <div class="head">
@@ -120,7 +133,7 @@
     </div>
   </section>
 
-  <!-- Section 3: Split Section with Authentic Child Therapy Image -->
+  <!-- Section 3: Split Section with Child Therapy Image -->
   <section class="section">
     <div class="container split">
       <div>
@@ -133,13 +146,13 @@
           <li>Therapy goals focused on autonomy rather than masking</li>
           <li>Continuous family collaboration and transparent progress notes</li>
         </ul>
-        <a class="btn" href="therapies.html">Explore our services</a>
+        <a class="btn" href="services.html">Explore our services</a>
       </div>
       <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=85" alt="Child participating in interactive developmental sensory therapy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80';">
     </div>
   </section>
 
-  <!-- 11. Section 4: Developmental Domains We Strengthen (No empty space) -->
+  <!-- 11 & 23. Section 4: Developmental Pillars (Reduced Text Size, 2x2 on 768px, Clean Mobile) -->
   <section class="section soft">
     <div class="container">
       <div class="head">
@@ -148,37 +161,45 @@
         <p>Each milestone is a celebration. We focus on the functional abilities that make daily life smoother and more fulfilling.</p>
       </div>
 
-      <div class="grid4">
-        <div class="stat">
-          <div class="ico" style="margin:0 auto 12px">👂</div>
-          <b>Sensory</b>
-          <p style="margin:6px 0 0;font-size:0.86rem">Auditory, tactile, and vestibular balance</p>
+      <div class="grid4 pillars-grid">
+        <div class="card pillar-card">
+          <div class="ico" style="font-size:1.6rem;margin-bottom:8px">👂</div>
+          <h3>Sensory</h3>
+          <p>Auditory, tactile, and vestibular balance.</p>
         </div>
-        <div class="stat">
-          <div class="ico" style="margin:0 auto 12px">💬</div>
-          <b>Language</b>
-          <p style="margin:6px 0 0;font-size:0.86rem">Receptive, expressive & AAC fluency</p>
+        <div class="card pillar-card">
+          <div class="ico" style="font-size:1.6rem;margin-bottom:8px">💬</div>
+          <h3>Language</h3>
+          <p>Receptive, expressive & AAC fluency.</p>
         </div>
-        <div class="stat">
-          <div class="ico" style="margin:0 auto 12px">✋</div>
-          <b>Motor</b>
-          <p style="margin:6px 0 0;font-size:0.86rem">Fine grasp, balance & motor planning</p>
+        <div class="card pillar-card">
+          <div class="ico" style="font-size:1.6rem;margin-bottom:8px">✋</div>
+          <h3>Motor</h3>
+          <p>Fine grasp, balance & motor planning.</p>
         </div>
-        <div class="stat">
-          <div class="ico" style="margin:0 auto 12px">💖</div>
-          <b>Emotions</b>
-          <p style="margin:6px 0 0;font-size:0.86rem">Co-regulation, calm recovery & joy</p>
+        <div class="card pillar-card">
+          <div class="ico" style="font-size:1.6rem;margin-bottom:8px">💖</div>
+          <h3>Emotions</h3>
+          <p>Co-regulation, calm recovery & joy.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 5: Parent Story -->
+  <!-- 7. Section 5: Parent Story with Author Image -->
   <section class="section">
     <div class="container grid2">
       <div class="quote">
         “Bright Path helped us see our daughter’s autism not as a deficit, but as a different way of experiencing our world. Her therapists helped her develop rich communication tools without forcing unnatural conformity. She feels proud and confident.”
-        <p style="margin-top:14px;font-weight:700;color:var(--ink)">— Sneha & Karthik N., Parents of 6-year-old Diya</p>
+        
+        <!-- 7. Author Image Added in Home 2 -->
+        <div class="testimonial-author-wrap">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=160&q=80" alt="Sneha & Karthik N." class="author-avatar" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=160&q=80';">
+          <div class="author-meta">
+            <b>Sneha & Karthik N.</b>
+            <span>Parents of 6-year-old Diya · Chennai</span>
+          </div>
+        </div>
       </div>
       <div>
         <span class="eyebrow">Family Partnership</span>
@@ -189,7 +210,41 @@
     </div>
   </section>
 
-  <!-- 5. CTA Section: Centered & Properly Aligned -->
+  <!-- 15. FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="head">
+        <span class="eyebrow">Frequently Asked Questions</span>
+        <h2>Common questions from parents</h2>
+        <p>Learn more about how our clinical team supports your child's developmental path.</p>
+      </div>
+
+      <div class="faq-grid">
+        <details class="faq-item" open>
+          <summary class="faq-question">How does Home 2 multidisciplinary care coordinate therapy?</summary>
+          <div class="faq-answer">
+            Our occupational therapists, speech pathologists, and pediatric behavioral specialists collaborate under one unified treatment plan. You don't have to manage fragmented advice from multiple clinics.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">What is Gestalt Language Processing (GLP)?</summary>
+          <div class="faq-answer">
+            Many neurodivergent children learn language through whole phrases or "scripts" (gestalts) before breaking them down into single words. Our speech therapists are certified to nurture gestalt processors toward spontaneous, flexible communication.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">How do you support sensory sensitivities during appointments?</summary>
+          <div class="faq-answer">
+            Our clinical suites use dimmable warm lighting, noise-absorbing materials, tactile exploration zones, and deep-pressure options. We always pace sessions to your child's nervous system comfort.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Centered CTA Section -->
   <section class="section soft">
     <div class="container">
       <div class="cta">
@@ -232,7 +287,7 @@
           <p><a href="home2.html">Home2</a></p>
           <p><a href="therapies.html">Our therapies</a></p>
           <p><a href="therapists.html">Meet the team</a></p>
-          <p><a href="gallery.html">Therapy gallery</a></p>
+          <p><a href="services.html">Clinical services</a></p>
           <p><a href="products.html">Sensory products</a></p>
           <p><a href="contact.html">Contact us</a></p>
         </div>
